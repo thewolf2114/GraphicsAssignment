@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mug : MonoBehaviour
 {
     [SerializeField]
-    int offSet;
+    float offSet;
 
     const int tileWidth = 4;
     const int tileHeight = 4;

@@ -12,6 +12,8 @@ TagManager:
   - Floor
   - Corner
   - Bowl
+  - Plate
+  - Mug
   layers:
   - Default
   - TransparentFX

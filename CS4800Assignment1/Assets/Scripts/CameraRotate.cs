@@ -21,7 +21,7 @@ public class CameraRotate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bowl = GameObject.FindGameObjectWithTag("Bowl");
+        bowl = GameObject.FindGameObjectWithTag(GameManager.Instance.FocalPoint);
 
         rotationPoint = bowl.transform.position;
     }
@@ -51,6 +51,11 @@ public class CameraRotate : MonoBehaviour
                 rotationSpeed = 10;
                 zoom = false;
             }
+        }
+
+        if (!zoom && (rotationPoint - transform.position).magnitude > tooClose)
+        {
+            zoom = true;
         }
     }
 }
